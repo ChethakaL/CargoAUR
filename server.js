@@ -17,7 +17,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors({
-  origin: ['http://192.168.1.5:4000', 'http://localhost:5000'] // Replace this with the origin you want to allow
+  origin: ['http://192.168.1.5:4000', 'http://localhost:5000','http://75.119.150.209:4000'] // Replace this with the origin you want to allow
 }));
 
 app.get("/", (req, res) => {
