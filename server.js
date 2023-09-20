@@ -17,8 +17,11 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors({
-  origin: ['http://192.168.1.5:4000', 'http://localhost:5000','http://75.119.150.209:4000'] // Replace this with the origin you want to allow
+  origin: ['http://localhost:3000', 'http://192.168.1.189:4001', 'http://192.168.1.189:3000'],
 }));
+
+
+
 
 app.get("/", (req, res) => {
     res.send('API is running');
@@ -35,7 +38,7 @@ app.use(errorHandler)
 
 
 // Set the listening port
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4001;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

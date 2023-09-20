@@ -5,10 +5,12 @@ const userSchema = new mongoose.Schema({
     userId: {type: String},
     username: { type: String},
     password: { type: String },
+    name: {type: String},
     email: {type: String},
     phone: {type: String},
     address: {type: String},
     dob: {type: String},
+    nic:{type: String},
 });
 
 userSchema.methods.matchPassword = async function (enteredPassword) {
